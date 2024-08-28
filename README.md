@@ -7,7 +7,7 @@
 
 - 📫 How to reach me **joaogbsp@gmail.com**
 
-- ⚡ Fun fact **I think in deepen my knowledge in backend**
+- ⚡ Fun fact: **I think in deepen my knowledge in backend**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

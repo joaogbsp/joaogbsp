@@ -1,8 +1,6 @@
 <h1 align="center">Hi 👋, I'm João Gabriel Pacheco</h1>
 <h3 align="center">A passionate developer from Brazil and a college student in tecnology</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=joaogbsp" alt="joaogbsp" /></a> </p>
-
 - 🌱 I’m currently learning **C, Java**
 
 - 📫 How to reach me **joaogbsp@gmail.com**

@@ -3,12 +3,13 @@
 
 - 🌱 I’m currently learning **C, Java**
 
-- 📫 How to reach me **joaogbsp@gmail.com**
+- 📫 How to reach me **joaogbsp@gmail.com** 
 
 - ⚡ Fun fact: **I think in deepen my knowledge in backend**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/jgabriel.sp/)
 <a href="https://linkedin.com/in/https://www.linkedin.com/in/jo%c3%a3o-pacheco-13b081239/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/jo%c3%a3o-pacheco-13b081239/" height="30" width="40" /></a>
 <a href="https://discord.gg/424597960853159957" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="424597960853159957" height="30" width="40" /></a>
 </p>

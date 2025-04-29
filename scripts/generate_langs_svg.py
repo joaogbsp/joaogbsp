@@ -32,23 +32,19 @@ custom_style = Style(
     colors=('#61dafb', '#4fc08d', '#f56565', '#ecc94b', '#9f7aea', '#fd79a8')
 )
 
-# 4) Gráfico de barras verticais
-chart = pygal.Bar(
-    width=800,
+# 4) Gráfico Radar
+chart = pygal.Radar(
+    range=(0, 100),
     style=custom_style,
     show_legend=False,
-    show_y_guides=False,
-    show_x_guides=False,
-    show_values=True,
-    value_formatter=lambda v: f'{v}%',
+    show_y_labels=True,
+    show_dots=True,
+    fill=True
 )
-chart.title = 'Most Used Languages'
-chart.x_labels = list(languages)      # nomes na horizontal, do maior para o menor
-chart.truncate_label = 15             # evita rótulos muito longos
+chart.title = 'Programming Languages Usage Profile'
+chart.x_labels = list(languages)
+chart.add('Uso (%)', list(percentages))
 
-# adiciona os percentuais como única série
-chart.add('', percentages)
-
-# 5) Gera o SVG
+# 5) Gera o SVG Radar
 os.makedirs('assets', exist_ok=True)
-chart.render_to_file('assets/most_used_languages.svg')
+chart.render_to_file('assets/most_used_languages_radar.svg')

@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.LANGS_TOKEN }}
+          persist-credentials: true
 
       - name: Configurar Python
         uses: actions/setup-python@v4

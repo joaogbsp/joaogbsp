@@ -27,11 +27,20 @@ jobs:
           LANGS_TOKEN: ${{ secrets.LANGS_TOKEN }}
         run: python scripts/generate_langs_svg.py
 
-      - name: Commitar e push do SVG
+      - name: Ver conteúdo de assets/
+        run: ls -lh assets
+
+      - name: Commit e push (somente se houver mudanças)
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/most_used_languages.svg
-          git diff --quiet && echo "Nada a commitar" || git commit -m "chore: atualizar gráfico de linguagens"
-          git push
 
+          # Se nada estiver staged, sai sem erro
+          if git diff --cached --quiet; then
+            echo "🔍 Nada a commitar"
+            exit 0
+          fi
+
+          git commit -m "chore: atualizar gráfico de linguagens"
+          git push

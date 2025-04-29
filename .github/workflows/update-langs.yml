@@ -1,1 +1,37 @@
+name: Atualizar gráfico de linguagens
+
+# roda diariamente às 02:00 UTC e também manualmente
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências
+        run: pip install PyGithub pygal
+
+      - name: Gerar gráfico de linguagens
+        env:
+          LANGS_TOKEN: ${{ secrets.LANGS_TOKEN }}
+        run: python scripts/generate_langs_svg.py
+
+      - name: Commitar e push do SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/most_used_languages.svg
+          git diff --quiet && echo "Nada a commitar" || git commit -m "chore: atualizar gráfico de linguagens"
+          git push
 
